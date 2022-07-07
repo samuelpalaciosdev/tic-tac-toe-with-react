@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 
-// WORKING, WHEN CLICKING THE SUBMIT BUTTON IT ASK FOR THE TWO INPUTS BEING FILLED AND THEN IF FILLED AND CLICKED
-// THE HEADER PAGE DISAPPEARS
-
 const PlayerSelect = ({ startGame, setStartGame, handleChange, handleChange2, whoStarts }) => {
-  // Change start value to true, so the first component dissapears
+  /* When one of the twos buttons is clicked, Change start value to true
+   */
   const functionsCaller = (e) => {
     e.preventDefault();
     setStartGame({
