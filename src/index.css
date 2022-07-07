@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.smaller {
+  font-size: 2.1rem;
+}
+
+.header-paragraph {
+  font-size: 2rem;
+}
+
+.weapon-title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.main-section-container {
+  max-width: 40.625rem;
+  margin: 8rem auto 0;
+  padding: 3rem 0 4rem;
+}
+
+input {
+  width: 11.25rem;
+}
+
+input:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.weapon {
+  padding: 1rem 1.5rem;
+  color: white;
+  border: none;
+  background-color: #16191b;
+}
+
+.weapon:not(:last-child) {
+  margin-left: 1rem;
+}
+
+.weapon-yellow {
+  color: #baff4b;
+}
+
+.weapon-blue {
+  color: #2cd5ff;
+}
+
+/*Board*/
+
+.game {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  min-height: 260px;
+}
+
+.game ol,
+.game ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.restart {
+  margin-top: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 11.25rem;
+  height: 11.25rem;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 11.25rem;
+}
+
+.square:focus {
+  outline: none;
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.game-info {
+  margin-left: 20px;
+  min-width: 190px;
+}
