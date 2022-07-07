@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import PlayerSelect from "./PlayerSelect";
 import Board from "./Board";
 
+/* One functionality to add its that for the whoStarts state when clicked the button x or o the board will be displayed
+   starting by the symbol clicked, like if i click the o button, the first move is done by O*/
+
 function App() {
   // State that checks if one of the buttons is clicked and if, then render the board component
   const [startGame, setStartGame] = useState({
@@ -52,7 +55,7 @@ function App() {
           </h1>
           {/* If startGame state is true return board component if not, return the playerSelect component with their props values */}
           {startGame.start ? (
-            <Board />
+            <Board starterPlayer={whoStarts.symbol} />
           ) : (
             <PlayerSelect
               startGame={startGame}

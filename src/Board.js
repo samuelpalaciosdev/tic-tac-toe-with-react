@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Board = () => {
+const Board = ({ starterPlayer }) => {
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   const nextValue = calculateNextValue(squares);
@@ -30,6 +30,7 @@ const Board = () => {
 
   return (
     <div>
+      <p>{starterPlayer}</p>
       <div className="status">{status}</div>
       <div className="board-row">
         {renderSquare(0)}
@@ -67,12 +68,12 @@ function calculateStatus(winner, squares, nextValue) {
   return winner
     ? `Winner: ${winner}`
     : squares.every(Boolean)
-    ? `Scratch: Cat's game`
+    ? `No one wins :(`
     : `It is ${nextValue} turn`;
 }
 
 function calculateNextValue(squares) {
-  return squares.filter(Boolean).length % 2 === 0 ? "O" : "X";
+  return squares.filter(Boolean).length % 2 === 0 ? "X" : "O";
 }
 
 function calculateWinner(squares) {
